@@ -4,11 +4,7 @@
 // returns the index of the target number
 // if the target number is not found, 
 
-type LinearSearchState = {
-    arr: number[],
-    target: number,
-    currentIndex: number
-}
+
 
 export function linearSearch(arr: number[], target: number): number | null {
     for (let i = 0; i < arr.length; i++) {

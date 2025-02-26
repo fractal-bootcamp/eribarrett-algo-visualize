@@ -1,16 +1,6 @@
 // Binary Search
 
-// takes in a sorted array of numbers, and a target number
-// returns the index of the target number
-// if the number is not found, returns null
 
-type BinarySearchState = {
-    array: number[],
-    target: number,
-    left: number,
-    right: number,
-    middle: number
-}
 
 // this can only run for INT_MAX iterations (2,147,468)
 // use a for loop, not a while loop
@@ -20,11 +10,11 @@ export function binarySearch(arr: number[], target: number): number | null {
     let left = 0;
     let right = arr.length - 1;
     while (left <= right) { //floor returns the largest int <= a given number
-        const middle = Math.floor((right + left) / 2);
+        const middle: number = Math.floor((right + left) / 2);
 
         if (arr[middle] === target) {
             return middle;
-        } else if (arr[middle] < target) {
+        } else if (arr[middle]! < target) {
             left = middle + 1; // left half is discarded
         } else {
             right = middle - 1; // right half is discarded
@@ -39,8 +29,8 @@ function recursiveBinarySearch(arr: number[], target: number): number | null {
 
     if (arr.length === 0) return null
     if (arr[mid] === target) return mid
-    if (target < arr[mid]) return recursiveBinarySearch(arr.slice(0, mid), target);
-    if (target > arr[mid]) return recursiveBinarySearch(arr.slice(mid + 1), target);
+    if (target < arr[mid]!) return recursiveBinarySearch(arr.slice(0, mid), target);
+    if (target > arr[mid]!) return recursiveBinarySearch(arr.slice(mid + 1), target);
 
     return null;
 }

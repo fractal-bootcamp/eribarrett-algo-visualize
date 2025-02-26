@@ -35,30 +35,6 @@ export function breadthFirstSearch(graph: Graph, startnode: Node) {
 }
 
 
-/// breadth first search SPEEDRUN
-/// checking layers, going deeper layer by layer
-
-function breadthFirstSearchSPEED(graph: Graph, startnode: Node) {
-    const visited = new Set<Node>();
-
-    const queue: Node[] = [startnode];
-
-    visited.add(startnode);
-
-    while (queue.length > 0) {
-        const currentNode = queue.shift();
-        if (!currentNode) continue;
-
-        console.log(currentNode.value);
-
-        for (const neighbor of currentNode.neighbors) {
-            if (!visited.has(neighbor)) {
-                visited.add(neighbor);
-                queue.push(neighbor);
-            }
-        }
-    }
-}
 
 
 

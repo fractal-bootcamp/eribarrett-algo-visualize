@@ -8,7 +8,7 @@ export function selectionSort(arr: ArrayNeedsSort): ArrayNeedsSort {
     const n = arr.length;
 
     for (let i = 0; i <= n - 1; i++) {
-        let minIndex: MinIndex = i;
+        const minIndex: MinIndex = i;
         for (let j = i + 1; j <= n - 1; j++) {
             if (arr[j]! < arr[minIndex]!) {
                 // swap j with minIndex
