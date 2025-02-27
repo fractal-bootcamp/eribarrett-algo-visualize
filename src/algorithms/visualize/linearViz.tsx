@@ -1,12 +1,21 @@
 import { motion } from "motion/react";
 
+
+
+
+
+
+
+
 export default function Rotate() {
     return (
-        <motion.div
-            style={box}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1 }}
-        />
+        <div className="flex justify-center items-center h-screen">
+            <motion.div
+                style={box}
+                animate={{ rotate: 360 }}
+                transition={{ duration: 1 }}
+            />
+        </div>
     )
 }
 

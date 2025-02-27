@@ -12,6 +12,8 @@ type Graph = {
 type Node = {
     value: string,
     neighbors: Node[],
+    x?: number,
+    y?: number,
 }
 
 export function depthFirstSearch(graph: Graph, startnode: Node) {
